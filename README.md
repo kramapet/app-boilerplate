@@ -1,7 +1,7 @@
 # app-boilerplate
 My default boilerplate for apps in Javascript and React
 
-## Install webpack
+## Install packages and webpack
 ```bash
 $ npm install 
 $ npm install -g webpack webpack-dev-server

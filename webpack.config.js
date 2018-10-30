@@ -1,21 +1,26 @@
-var config = {
+const path = require('path')
+
+module.exports = {
+  mode: 'development',
 	entry: __dirname + '/src/index.js',
 	output: {
 		path: __dirname + '/dist',
 		filename: 'bundle.js'
 	},
 	module: {
-		loaders: [{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'babel-loader',
-			query: {
-				cacheDirectory: true,
-				plugins: ['transform-runtime', 'add-module-exports'],
-				presets: ['es2015', 'react', 'stage-1']
+	  rules: [
+		  {
+			  test: /\.js$/,
+				use: {
+				  loader: 'babel-loader',
+					options: {
+					  cacheDirectory: true,
+						plugins: ['transform-runtime', 'add-module-exports'],
+						presets: ['env', 'react', 'stage-1']
+					}
+				},
+				exclude: /node_modules/
 			}
-		}]
+		]
 	}
 };
-
-module.exports = config;

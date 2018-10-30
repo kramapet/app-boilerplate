@@ -3,16 +3,15 @@ My default boilerplate for apps in Javascript and React
 
 ## Install packages and webpack
 ```bash
-$ npm install 
-$ npm install -g webpack webpack-dev-server
+$ npm i
 ```
 
 ## Compile your project
 ```bash
-$ webpack
+$ ./node_modules/webpack/bin/webpack.js
 ```
 
 ## Develop online
 ```bash
-$ webpack-dev-server --content-dist dist/ --hot --inline
+$ ./node_modules/webpack-dev-server/bin/webpack-dev-server.js
 ```
